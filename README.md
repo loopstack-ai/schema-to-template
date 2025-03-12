@@ -85,18 +85,6 @@ A user role
 
 ## API
 
-### Types
-
-```typescript
-interface JSONSchemaConfigType {
-  type?: 'object' | 'array' | 'string' | 'number' | 'boolean' | 'null';
-  description?: string;
-  properties?: Record<string, JSONSchemaConfigType>;
-  items?: JSONSchemaConfigType;
-  [key: string]: any;
-}
-```
-
 ### `SchemaToTemplateBuilder`
 
 The main class that handles conversion of JSON schemas to markdown templates.
@@ -124,6 +112,11 @@ npm run test:watch
 # Build the package
 npm run build
 ```
+
+## Author
+
+**Jakob Klippel**  
+LinkedIn: [Jakob Klippel](https://www.linkedin.com/in/jakob-klippel-414a30261/)
 
 ## License
 

@@ -4,7 +4,6 @@
   "description": "A utility to convert JSON schemas to markdown templates for LLMs prompts",
   "author": {
     "name": "Jakob Klippel",
-    "email": "jakob@loopstack.ai",
     "url": "https://www.linkedin.com/in/jakob-klippel-414a30261/"
   },
   "type": "module",
