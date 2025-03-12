@@ -1,0 +1,45 @@
+{
+  "name": "@loopstack/schema-to-template",
+  "version": "1.0.0",
+  "description": "A utility to convert JSON schemas to markdown templates for LLMs prompts",
+  "author": {
+    "name": "Jakob Klippel",
+    "email": "jakob@loopstack.ai",
+    "url": "https://www.linkedin.com/in/jakob-klippel-414a30261/"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "json-schema",
+    "markdown",
+    "template",
+    "converter"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "typescript": "^5.8.2",
+    "vitest": "^0.34.6"
+  },
+  "engines": {
+    "node": ">=14.16"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
+}
