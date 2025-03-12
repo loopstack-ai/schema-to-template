@@ -1,4 +1,3 @@
-
 export interface SimpleJSONSchema {
   type?: 'object' | 'array' | 'string' | 'number' | 'boolean' | 'null';
   description?: string;
@@ -23,7 +22,7 @@ export class SchemaToTemplateBuilder {
   private schemaToMarkdown(
     schema: SimpleJSONSchema | null | undefined,
     level: number,
-    parentKey?: string,
+    parentKey?: string
   ): string {
     if (!schema) return '';
 
@@ -35,11 +34,7 @@ export class SchemaToTemplateBuilder {
         const properties = schema.properties || {};
         for (const key of Object.keys(properties)) {
           markdown += `\n\n${indent} ${key}\n`;
-          markdown += this.schemaToMarkdown(
-            properties[key],
-            level + 1,
-            key,
-          );
+          markdown += this.schemaToMarkdown(properties[key], level + 1, key);
         }
         break;
       }
@@ -48,10 +43,7 @@ export class SchemaToTemplateBuilder {
         if (schema.items) {
           [1, 2].forEach((index: number) => {
             markdown += `\n\n${indent} item ${index}\n\n`;
-            markdown += this.schemaToMarkdown(
-              schema.items,
-              level + 1,
-            );
+            markdown += this.schemaToMarkdown(schema.items, level + 1);
           });
           if (parentKey) {
             markdown += `\n\n... repeat for each ${parentKey.replace(/ies$/, 'y').replace(/s$/, '')}`;

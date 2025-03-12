@@ -19,7 +19,10 @@
     "build": "tsc",
     "test": "vitest run",
     "test:watch": "vitest",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,md}\"",
+    "lint": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,md}\""
   },
   "keywords": [
     "json-schema",
@@ -30,6 +33,8 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^22.13.10",
+    "eslint-config-prettier": "^10.0.1",
+    "prettier": "^3.4.2",
     "typescript": "^5.8.2",
     "vitest": "^0.34.6"
   },

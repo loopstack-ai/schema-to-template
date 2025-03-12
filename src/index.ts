@@ -1,1 +1,1 @@
-export * from './schema-to-template-builder.js'
+export * from './schema-to-template-builder.js';
