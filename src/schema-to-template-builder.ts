@@ -20,7 +20,7 @@ export class SchemaToTemplateBuilder {
    * @param parentKey - The key of the parent property
    * @returns The generated markdown
    */
-  schemaToMarkdown(
+  private schemaToMarkdown(
     schema: SimpleJSONSchema | null | undefined,
     level: number,
     parentKey?: string,
