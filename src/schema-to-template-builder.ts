@@ -22,7 +22,7 @@ export class SchemaToTemplateBuilder {
   private schemaToMarkdown(
     schema: SimpleJSONSchema | null | undefined,
     level: number,
-    parentKey?: string
+    parentKey?: string,
   ): string {
     if (!schema) return '';
 
@@ -71,7 +71,9 @@ export class SchemaToTemplateBuilder {
    * @param schema - The JSON schema to convert
    * @returns The generated markdown template
    */
-  createTemplateFromSchema(schema: SimpleJSONSchema | null | undefined): string {
+  createTemplateFromSchema(
+    schema: SimpleJSONSchema | null | undefined,
+  ): string {
     return this.schemaToMarkdown(schema, 1);
   }
 }

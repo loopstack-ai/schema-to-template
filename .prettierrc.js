@@ -1,12 +1,17 @@
 export default {
+  printWidth: 80,
+  tabWidth: 2,
+  useTabs: false,
   semi: true,
   singleQuote: true,
-  tabWidth: 2,
-  trailingComma: 'es5',
-  printWidth: 100,
+  quoteProps: 'as-needed',
+  jsxSingleQuote: false,
+  trailingComma: 'all',
   bracketSpacing: true,
-  arrowParens: 'avoid',
+  bracketSameLine: false,
+  arrowParens: 'always',
   endOfLine: 'lf',
+  embeddedLanguageFormatting: 'auto',
   overrides: [
     {
       files: '*.{ts,tsx}',
