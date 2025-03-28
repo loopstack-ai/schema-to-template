@@ -11,6 +11,16 @@ export interface SimpleJSONSchema {
  * Converts JSON schemas to markdown templates
  */
 export class SchemaToTemplateBuilder {
+
+  /**
+   * Change first letter to uppercase
+   *
+   * @param str
+   */
+  upperCaseFirst(str: string): string {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+
   /**
    * Converts a JSON schema to markdown
    *
@@ -33,7 +43,7 @@ export class SchemaToTemplateBuilder {
       case 'object': {
         const properties = schema.properties || {};
         for (const key of Object.keys(properties)) {
-          markdown += `\n\n${indent} ${key}\n`;
+          markdown += `\n\n${indent} ${this.upperCaseFirst(key)}\n`;
           markdown += this.schemaToMarkdown(properties[key], level + 1, key);
         }
         break;
@@ -42,7 +52,7 @@ export class SchemaToTemplateBuilder {
       case 'array': {
         if (schema.items) {
           [1, 2].forEach((index: number) => {
-            markdown += `\n\n${indent} item ${index}\n\n`;
+            markdown += `\n\n${indent} Item ${index}\n\n`;
             markdown += this.schemaToMarkdown(schema.items, level + 1);
           });
           if (parentKey) {
