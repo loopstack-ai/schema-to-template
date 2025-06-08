@@ -35,9 +35,9 @@ describe('SchemaToTemplateBuilder', () => {
       };
 
       const result = builder.createTemplateFromSchema(schema);
-      expect(result).toContain('# name');
+      expect(result).toContain('# Name');
       expect(result).toContain('The name of the user');
-      expect(result).toContain('# age');
+      expect(result).toContain('# Age');
       expect(result).toContain('The age of the user');
     });
 
@@ -51,8 +51,8 @@ describe('SchemaToTemplateBuilder', () => {
       };
 
       const result = builder.createTemplateFromSchema(schema);
-      expect(result).toContain('# item 1');
-      expect(result).toContain('# item 2');
+      expect(result).toContain('# Item 1');
+      expect(result).toContain('# Item 2');
       expect(result).toContain('A tag for the item');
     });
 
@@ -86,11 +86,11 @@ describe('SchemaToTemplateBuilder', () => {
       };
 
       const result = builder.createTemplateFromSchema(schema);
-      expect(result).toContain('# user');
-      expect(result).toContain('## name');
-      expect(result).toContain('## address');
-      expect(result).toContain('### street');
-      expect(result).toContain('### city');
+      expect(result).toContain('# User');
+      expect(result).toContain('## Name');
+      expect(result).toContain('## Address');
+      expect(result).toContain('### Street');
+      expect(result).toContain('### City');
       expect(result).toContain('The street name');
       expect(result).toContain('The city name');
     });
@@ -119,11 +119,11 @@ describe('SchemaToTemplateBuilder', () => {
       };
 
       const result = builder.createTemplateFromSchema(schema);
-      expect(result).toContain('# users');
-      expect(result).toContain('## item 1');
-      expect(result).toContain('## item 2');
-      expect(result).toContain('### name');
-      expect(result).toContain('### age');
+      expect(result).toContain('# Users');
+      expect(result).toContain('## Item 1');
+      expect(result).toContain('## Item 2');
+      expect(result).toContain('### Name');
+      expect(result).toContain('### Age');
       expect(result).toContain('... repeat for each user');
     });
 

@@ -11,7 +11,6 @@
     "type": "git",
     "url": "https://github.com/loopstack-ai/schema-to-template"
   },
-  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
